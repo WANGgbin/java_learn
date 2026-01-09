@@ -14,6 +14,6 @@ public class UtilStudent extends UtilPerson{
 
     @Override
     public String string() {
-       return super.string() + "," + String.format("grade: %d", grade);
+       return super.string() + ", " + String.format("grade: %d", grade);
     }
 }
