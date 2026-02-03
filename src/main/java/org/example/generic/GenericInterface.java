@@ -22,6 +22,12 @@ interface MyGenericInterface<T> {
 }
 
 class Impl implements MyGenericInterface<String> {
+    /*
+    * java 编译器会生成一个该方法的包装方法(javac叫桥接方法)。该方法的声明如下：
+    * public java.lang.Object run();
+    * descriptor: ()Ljava/lang/Object;
+    * 其内部会调用真正的 run 方法，最后实际调用的就是该方法。
+    * */
     @Override
     public String run() {
         return "hello";
